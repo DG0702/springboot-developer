@@ -18,8 +18,8 @@ import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
-import com.dia.springbootdeveloper.dto.AddArticleRequest;
-import com.dia.springbootdeveloper.dto.UpdateArticleRequest;
+import com.dia.springbootdeveloper.dto.request.AddArticleRequest;
+import com.dia.springbootdeveloper.dto.request.UpdateArticleRequest;
 import com.dia.springbootdeveloper.entity.Article;
 import com.dia.springbootdeveloper.repository.BlogRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;

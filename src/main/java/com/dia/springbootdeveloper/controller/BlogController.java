@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.dia.springbootdeveloper.dto.AddArticleRequest;
-import com.dia.springbootdeveloper.dto.ArticleResponse;
-import com.dia.springbootdeveloper.dto.UpdateArticleRequest;
+import com.dia.springbootdeveloper.dto.request.AddArticleRequest;
+import com.dia.springbootdeveloper.dto.response.ArticleResponse;
+import com.dia.springbootdeveloper.dto.request.UpdateArticleRequest;
 import com.dia.springbootdeveloper.entity.Article;
 import com.dia.springbootdeveloper.service.BlogService;
 
