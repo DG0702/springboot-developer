@@ -1,4 +1,4 @@
-package com.dia.springbootdeveloper.dto;
+package com.dia.springbootdeveloper.dto.request;
 
 import com.dia.springbootdeveloper.entity.Article;
 
