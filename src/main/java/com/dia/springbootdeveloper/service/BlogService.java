@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.dia.springbootdeveloper.dto.AddArticleRequest;
-import com.dia.springbootdeveloper.dto.UpdateArticleRequest;
+import com.dia.springbootdeveloper.dto.request.AddArticleRequest;
+import com.dia.springbootdeveloper.dto.request.UpdateArticleRequest;
 import com.dia.springbootdeveloper.entity.Article;
 import com.dia.springbootdeveloper.repository.BlogRepository;
 

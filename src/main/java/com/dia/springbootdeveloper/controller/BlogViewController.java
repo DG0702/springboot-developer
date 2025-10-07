@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.dia.springbootdeveloper.dto.ArticleListViewResponse;
-import com.dia.springbootdeveloper.dto.ArticleViewResponse;
+import com.dia.springbootdeveloper.dto.response.ArticleListViewResponse;
+import com.dia.springbootdeveloper.dto.response.ArticleViewResponse;
 import com.dia.springbootdeveloper.entity.Article;
 import com.dia.springbootdeveloper.service.BlogService;
 
