@@ -18,3 +18,9 @@ spring:
     init:
       mode: always
 
+jwt:
+  issuer: ${ISSUER}
+  secret_key: ${SECRET_KEY}
+
+
+
