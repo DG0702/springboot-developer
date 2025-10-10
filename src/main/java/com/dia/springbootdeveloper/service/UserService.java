@@ -21,6 +21,10 @@ public class UserService {
             .email(request.getEmail())
             .password(bCryptPasswordEncoder.encode(request.getPassword()))
             .build()).getId();
+    }
 
+    public User findById(Long userId) {
+        return userRepository.findById(userId)
+            .orElseThrow(() -> new IllegalArgumentException("UnExcepted user"));
     }
 }
