@@ -19,7 +19,7 @@ public class TokenAuthenticationFilter extends OncePerRequestFilter {
 
     private final TokenProvider tokenProvider;
     private final String Header_Authorization = "Authorization";
-    private final String Token_Prefix = "Bearer";
+    private final String Token_Prefix = "Bearer ";
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response,
@@ -29,8 +29,8 @@ public class TokenAuthenticationFilter extends OncePerRequestFilter {
         String token = getAccessToken(authorizationHeader);
 
         if(tokenProvider.validToken(token)) {
-            tokenProvider.getAuthentication(token);
-            SecurityContextHolder.getContext().getAuthentication();
+            Authentication authentication = tokenProvider.getAuthentication(token);
+            SecurityContextHolder.getContext().setAuthentication(authentication);
         }
 
         filterChain.doFilter(request,response);

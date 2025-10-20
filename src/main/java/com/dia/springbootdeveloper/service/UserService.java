@@ -14,17 +14,24 @@ import lombok.RequiredArgsConstructor;
 public class UserService {
 
     private final UserRepository userRepository;
-    private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
     public Long save(AddUserRequest request) {
+
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+
         return userRepository.save(User.builder()
             .email(request.getEmail())
-            .password(bCryptPasswordEncoder.encode(request.getPassword()))
+            .password(encoder.encode(request.getPassword()))
             .build()).getId();
     }
 
     public User findById(Long userId) {
         return userRepository.findById(userId)
+            .orElseThrow(() -> new IllegalArgumentException("UnExcepted user"));
+    }
+
+    public User findByEmail(String email) {
+        return userRepository.findByEmail(email)
             .orElseThrow(() -> new IllegalArgumentException("UnExcepted user"));
     }
 }

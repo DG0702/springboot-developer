@@ -51,7 +51,10 @@ public class TokenProvider {
 
     public boolean validToken(String token) {
         try {
-            getClaims(token);
+            Jwts.parser()
+                .verifyWith(getSigningKey())
+                .build()
+                .parseSignedClaims(token);
             return true;
         } catch (Exception e) {
             return false;
