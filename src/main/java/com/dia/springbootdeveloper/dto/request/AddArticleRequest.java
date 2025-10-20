@@ -14,10 +14,11 @@ public class AddArticleRequest {
     private String title;
     private String content;
 
-    public Article from(){
+    public Article from(String author){
         return Article.builder()
             .title(title)
             .content(content)
+            .author(author)
             .build();
     }
 }

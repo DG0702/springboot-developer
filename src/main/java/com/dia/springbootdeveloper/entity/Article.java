@@ -34,10 +34,14 @@ public class Article {
     @Column(nullable = false)
     private String content;
 
+    @Column(nullable = false)
+    private String author;
+
     @Builder
-    public Article(String title, String content) {
+    public Article(String title, String content, String author) {
         this.title = title;
         this.content = content;
+        this.author = author;
     }
 
     @CreatedDate
